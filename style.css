@@ -1,0 +1,218 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('img/BG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    /* Remover ou ajustar a propriedade background para aplicar transparência */
+    /* Se você quer um gradiente transparente sobre a imagem de fundo: */
+    background: linear-gradient(135deg, rgba(106, 17, 203, 0.2) 0%, rgba(37, 117, 252, 0.7) 100%);
+    /* O último valor (0.7) é a opacidade. Você pode ajustar de 0 (totalmente transparente) a 1 (totalmente opaco). */
+    
+    /* Ou, se você quer apenas uma cor sólida transparente: */
+    /* background-color: rgba(0, 0, 0, 0.5); */ /* Preto com 50% de opacidade */
+
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px auto;
+    border: 4px solid white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 10px 0 5px 0;
+    font-size: 1.8em;
+}
+
+p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.button {
+    display: block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.primary-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.social-button {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-button.linkedin { background-color: #0e76a8; }
+.social-button.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-button.github { background-color: #333; }
+
+.social-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+    color: white;
+}
+
+.whatsapp-button:hover {
+    background-color: #1da851;
+    transform: translateY(-2px);
+}
+
+.pix-button {
+    background-color: #2ab759;
+    color: white;
+}
+
+.pix-button:hover {
+    background-color: #1e8e3e;
+    transform: translateY(-2px);
+}
+
+.save-contact-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.save-contact-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.pix-qr-img {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.copy-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.copy-button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 480px) {
+    .profile-header, .button-container, .modal-content {
+        width: 95%;
+    }
+    h1 {
+        font-size: 1.6em;
+    }
+    .button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}

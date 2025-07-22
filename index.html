@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Nome - Cartão Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="caminho/para/seu/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="profile-header">
+        <div class="profile-pic-container">
+            <img src="img/perfil.png" alt="Sua Foto" class="profile-pic">
+        </div>
+        <h1>Eduardo Luparele</h1>
+        <p>Coordenado de Security | Intalog</p>
+    </header>
+
+    <main class="button-container">
+        <a href="https://wa.me/5521971292787" target="_blank" class="button whatsapp-button">WhatsApp</a>
+        <a href="tel:+5521971292787" class="button primary-button">Ligar</a>
+        <a href="mailto:security@intalog.com.br" class="button primary-button">Email</a>
+        <a href="https://www.linkedin.com/in/eduardo-luparele-coelho-492851296/" target="_blank" class="button social-button linkedin">LinkedIn</a>
+        <a href="https://www.instagram.com/eduardo_luparele" target="_blank" class="button social-button instagram">Instagram</a>
+        <a href="https://github.com/Luparele" target="_blank" class="button social-button github">GitHub</a>
+        <button class="button pix-button" id="openPixQr">Pix QR Code</button>
+        <button class="button save-contact-button" id="saveContact">Salvar Contato</button>
+    </main>
+
+    <div id="pixModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Seu Pix QR Code</h2>
+            <img src="img/pix.jpg" alt="QR Code Pix" class="pix-qr-img">
+            <p>Ou copie a chave Pix: <span id="pixKey">09995146797</span> <button class="copy-button" data-clipboard-target="#pixKey">Copiar</button></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+</body>
+</html>
