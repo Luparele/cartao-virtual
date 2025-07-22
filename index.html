@@ -6,7 +6,8 @@
     <title>Eduardo Luparele - Cartão Virtual</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="caminho/para/seu/favicon.ico" type="image/x-icon">
-    <meta name="theme-color" content="#1A2026"> 
+    <meta name="theme-color" content="#F8F8F8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="profile-header">
@@ -14,18 +15,34 @@
             <img src="img/perfil.png" alt="Sua Foto" class="profile-pic">
         </div>
         <h1>Eduardo Luparele</h1>
-        <p>Coordenado de Security | Intalog</p>
+        <p>Coordenador de Security | Intalog</p>
     </header>
 
     <main class="button-container">
-        <a href="https://wa.me/5521971292787" target="_blank" class="button whatsapp-button">WhatsApp</a>
-        <a href="tel:+5521971292787" class="button primary-button">Ligar</a>
-        <a href="mailto:security@intalog.com.br" class="button primary-button">Email</a>
-        <a href="https://www.linkedin.com/in/eduardo-luparele-coelho-492851296/" target="_blank" class="button social-button linkedin">LinkedIn</a>
-        <a href="https://www.instagram.com/eduardo_luparele" target="_blank" class="button social-button instagram">Instagram</a>
-        <a href="https://github.com/Luparele" target="_blank" class="button social-button github">GitHub</a>
-        <button class="button pix-button" id="openPixQr">Pix QR Code</button>
-        <button class="button save-contact-button" id="saveContact">Salvar Contato</button>
+        <a href="https://wa.me/5521971292787" target="_blank" class="button whatsapp-button">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="tel:+5521971292787" class="button primary-button">
+            <i class="fas fa-phone"></i> Ligar
+        </a>
+        <a href="mailto:security@intalog.com.br" class="button email-button">
+            <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/eduardo-luparele-coelho-492851296/" target="_blank" class="button social-button linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/eduardo_luparele" target="_blank" class="button social-button instagram">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://github.com/Luparele" target="_blank" class="button social-button github">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        <button class="button pix-button" id="openPixQr">
+            <i class="fas fa-qrcode"></i> Pix QR Code
+        </button>
+        <button class="button save-contact-button" id="saveContact">
+            <i class="fas fa-address-book"></i> Salvar Contato
+        </button>
     </main>
 
     <div id="pixModal" class="modal">
