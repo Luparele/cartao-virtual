@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8; /* Fundo branco off-white */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
-    color: #333;
+    color: #333; /* Texto escuro para contraste no fundo claro */
 }
 
 .profile-header {
@@ -23,8 +23,11 @@ body {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     color: #333;
-    width: 100%;
-    max-width: 320px; /* Largura do header ajustada */
+    /* *** NOVAS ALTERAÇÕES AQUI: Largura e centralização do header *** */
+    width: 60%; /* Define a largura do header como 60% da página */
+    max-width: 320px; /* **Largura máxima do header, para não ficar muito largo em telas grandes** */
+    /* margin: 0 auto; - Não é necessário aqui pois o pai (body) já usa display: flex e align-items: center */
+    
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -63,18 +66,16 @@ p {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
-    max-width: 320px; /* Largura máxima do container de botões */
+    width: 100%; /* Ocupa a largura total disponível do pai (body) até o max-width */
+    max-width: 320px; /* Largura máxima do container de botões, igual ao header para alinhamento */
     padding-top: 10px;
-    align-items: center; /* Centraliza os botões */
+    align-items: center; /* Centralizar os botões horizontalmente */
 }
 
 .button {
     display: flex;
     align-items: center;
-    /* *** MUDANÇA ESSENCIAL AQUI: justify-content para centralizar conteúdo *** */
     justify-content: center; /* Centraliza ícone e texto no botão */
-    
     padding: 10px 15px;
     border-radius: 8px;
     text-align: center; /* Alinha o texto centralmente dentro do botão */
@@ -87,10 +88,7 @@ p {
     border: 1px solid #e0e0e0;
     cursor: pointer;
     background-color: #ffffff;
-    
-    width: 60%; /* **Define a largura do botão como 60% do .button-container** */
-    /* Removido max-width aqui, pois width: 60% já controla o tamanho */
-    /* Removido padding-left complexo */
+    width: 60%; /* Define a largura do botão como 60% do .button-container */
     box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
 }
 
@@ -98,7 +96,6 @@ p {
     margin-right: 8px; /* Espaço entre o ícone e o texto */
     font-size: 1em; /* Tamanho do ícone ajustado */
     color: #555; /* Cor do ícone padrão */
-    /* REMOVIDO: position: absolute; left: ...; transform: ...; */
 }
 
 .button:hover {
@@ -107,7 +104,7 @@ p {
     background-color: #f5f5f5;
 }
 
-/* Cores dos botões (sem alterações aqui, mantendo o tema clean) */
+/* Cores dos botões */
 .whatsapp-button {
     background-color: #e6ffe6;
     color: #25d366;
@@ -127,6 +124,19 @@ p {
 .primary-button i { color: #007bff; }
 .primary-button:hover {
     background-color: #cce0f0;
+    transform: translateY(-2px);
+}
+
+.email-button {
+    background-color: #ffe0e0;
+    color: #cc3333;
+    border-color: #ffc0c0;
+}
+.email-button i {
+    color: #cc3333;
+}
+.email-button:hover {
+    background-color: #f5d0d0;
     transform: translateY(-2px);
 }
 
@@ -199,6 +209,8 @@ p {
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(8px);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal-content {
@@ -212,6 +224,7 @@ p {
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     color: #333;
     border: 1px solid #e0e0e0;
+    margin: 0 auto;
 }
 
 .close-button {
@@ -259,11 +272,17 @@ p {
         padding: 15px;
     }
 
+    /* Em telas pequenas, o header e o container de botões podem ocupar a largura total */
     .profile-header,
     .button-container,
     .modal-content {
         width: 100%;
-        max-width: none;
+        max-width: none; /* Remove o max-width fixo para preencher a tela em mobile */
+    }
+
+    /* Ajuste para o header em mobile */
+    .profile-header {
+        padding: 15px; /* Ajusta o padding para telas menores */
     }
 
     h1 {
@@ -278,13 +297,11 @@ p {
         padding: 9px 12px;
         font-size: 0.9em;
         width: 80%; /* Ajusta a largura dos botões para 80% em telas pequenas */
-        /* Removido padding-left e position do ícone aqui também */
     }
 
     .button i {
         font-size: 1.1em;
         margin-right: 8px;
-        /* Removido left e transform do ícone aqui também */
     }
 
     .profile-pic-container {
@@ -292,18 +309,4 @@ p {
         height: 100px;
         margin-bottom: 12px;
     }
-}
-
-/* Adicione esta nova regra para o botão de Email */
-.email-button {
-    background-color: #ffe0e0; /* Vermelho pastel bem claro */
-    color: #cc3333; /* Texto vermelho mais escuro */
-    border-color: #ffc0c0; /* Borda vermelho pastel */
-}
-.email-button i {
-    color: #cc3333; /* Ícone vermelho mais escuro */
-}
-.email-button:hover {
-    background-color: #f5d0d0; /* Tom mais escuro no hover */
-    transform: translateY(-2px);
 }
