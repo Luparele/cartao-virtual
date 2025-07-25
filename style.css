@@ -62,12 +62,41 @@ p {
     color: #666; /* Cor de texto secundário */
 }
 
+/* NOVO ESTILO PARA O CONTAINER DO LOGO COM FUNDO AZUL ROYAL */
+.logo-container {
+    margin-top: 20px; /* Espaço acima do logo */
+    margin-bottom: 15px; /* Espaço abaixo do logo antes dos botões */
+    text-align: center; /* Centraliza o logo se ele for inline ou tiver width menor */
+    
+    background-color: #4169E1; /* **Fundo Azul Royal** */
+    border-radius: 10px; /* **Borda arredondada igual aos demais** */
+    padding: 10px; /* Adiciona um padding interno para o logo não encostar nas bordas da div */
+    width: 60%; /* Ocupa 60% da largura, igual ao header/botões */
+    max-width: 320px; /* Mesma largura máxima dos demais elementos */
+    box-sizing: border-box; /* Garante que padding seja incluído na largura */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra consistente */
+    
+    /* Para centralizar o logo-container horizontalmente se a largura for menor que 100% do pai */
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+/* Estilo para a imagem do logo dentro do container */
+.company-logo {
+    max-width: 150px; /* Ajuste o tamanho máximo do logo conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que as margens auto funcionem para centralizar */
+    margin: 0 auto; /* Centraliza o logo horizontalmente dentro do logo-container */
+    opacity: 0.9; /* Uma leve transparência para um visual mais clean */
+    filter: brightness(1.2); /* Opcional: ajustar brilho se o logo for escuro em fundo azul */
+}
+
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espaçamento entre botões um pouco menor */
+    gap: 10px;
     width: 100%; /* Ocupa a largura total disponível do pai (body) até o max-width */
-    max-width: 320px; /* Largura máxima do container de botões, igual ao header para alinhamento */
+    max-width: 320px; /* Largura máxima do container de botões, igual ao header e logo */
     padding-top: 10px;
     align-items: center; /* Centralizar os botões horizontalmente */
 }
@@ -99,16 +128,16 @@ p {
 }
 
 .button:hover {
-    transform: translateY(-1px); /* Elevação muito sutil */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Sombra mais visível no hover */
-    background-color: #f5f5f5; /* Leve mudança de cor no hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    background-color: #f5f5f5;
 }
 
 /* Cores dos botões - agora com tons mais claros e profissionais, ou mantendo a identidade visual da marca */
 .whatsapp-button {
     background-color: #e6ffe6; /* Verde claro */
     color: #25d366; /* Texto verde WhatsApp */
-    border-color: #c0f0c0;
+    border-color: #c0f0f0;
 }
 .whatsapp-button i { color: #25d366; }
 .whatsapp-button:hover {
@@ -273,23 +302,25 @@ p {
         padding: 15px;
     }
 
-    /* Em telas pequenas, o container de botões e o modal podem ocupar a largura total, mas o header tem limite */
     .button-container,
     .modal-content {
         width: 100%;
-        max-width: none; /* Remove o max-width fixo para preencher a tela em mobile */
+        max-width: none;
     }
     
-    /* Ajuste para o header em mobile: define largura e centraliza */
     .profile-header {
-        width: calc(100% - 30px); /* Ocupa 100% da largura menos o padding do body */
-        max-width: 320px; /* Mantém o limite de largura para consistência */
-        margin-left: auto; /* Centraliza o header */
-        margin-right: auto; /* Centraliza o header */
-        padding: 15px; /* Ajusta o padding para telas menores */
-        box-sizing: border-box; /* Garante que padding não afete a largura */
+        width: calc(100% - 30px);
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px;
+        box-sizing: border-box;
     }
 
+    /* Ajuste para o logo em mobile */
+    .company-logo {
+        max-width: 120px;
+    }
 
     h1 {
         font-size: 1.5em;
@@ -302,7 +333,7 @@ p {
     .button {
         padding: 9px 12px;
         font-size: 0.9em;
-        width: 80%; /* Ajusta a largura dos botões para 80% em telas pequenas */
+        width: 80%;
     }
 
     .button i {
