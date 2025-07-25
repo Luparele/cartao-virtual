@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const organization = "Intalog"; // Sua empresa
             const title = "Coordenador Security"; // Seu cargo
 
+            // URL do seu cartão virtual
+            const cardUrl = "https://luparele.github.io/cartao-virtual/";
+
             const vcard = `BEGIN:VCARD
 VERSION:3.0
 N:${lastName};${firstName};;;
@@ -75,7 +78,7 @@ ORG:${organization}
 TITLE:${title}
 TEL;TYPE=CELL:${tel}
 EMAIL;TYPE=INTERNET:${email}
-URL:https://www.linkedin.com/in/eduardo-luparele-coelho-492851296/
+URL:${cardUrl}
 END:VCARD`;
 
             const blob = new Blob([vcard], { type: 'text/vcard' });
