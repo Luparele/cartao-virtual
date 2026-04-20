@@ -54,6 +54,56 @@ document.addEventListener('DOMContentLoaded', function() {
     */ // Fim da lógica do Pix comentada
 
 
+    // Lógica para o Modal de Compartilhamento
+    const shareModal = document.getElementById('shareModal');
+    const openShareModalButton = document.getElementById('openShareModal');
+    const closeShareModalButton = document.getElementById('closeShareModal');
+
+    if (openShareModalButton) {
+        openShareModalButton.addEventListener('click', function() {
+            if (shareModal) {
+                shareModal.style.display = 'flex';
+            }
+        });
+    }
+
+    if (closeShareModalButton) {
+        closeShareModalButton.addEventListener('click', function() {
+            if (shareModal) {
+                shareModal.style.display = 'none';
+            }
+        });
+    }
+
+    // Fechar modais ao clicar fora
+    window.addEventListener('click', function(event) {
+        if (event.target == shareModal) {
+            shareModal.style.display = 'none';
+        }
+        const pixModal = document.getElementById('pixModal');
+        if (event.target == pixModal) {
+            pixModal.style.display = 'none';
+        }
+    });
+
+    // Clipboard para o link de compartilhamento
+    const clipboard = new ClipboardJS('.copy-button');
+    clipboard.on('success', function(e) {
+        const originalText = e.trigger.innerText;
+        e.trigger.innerText = 'Copiado!';
+        e.trigger.style.backgroundColor = '#28a745';
+        e.trigger.style.color = '#fff';
+        
+        setTimeout(() => {
+            e.trigger.innerText = originalText;
+            e.trigger.style.backgroundColor = '';
+            e.trigger.style.color = '';
+        }, 2000);
+        e.clearSelection();
+    });
+
+
+
     // Lógica para salvar contato (VCF) - PERMANECE ATIVA
     const saveContactButton = document.getElementById('saveContact');
     

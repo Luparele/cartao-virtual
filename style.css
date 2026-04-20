@@ -30,7 +30,42 @@ body {
     max-width: 320px; /* Largura máxima do header, para não ficar muito largo em telas grandes */
     border-radius: 10px; /* Bordas suaves */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave e sutil */
+    position: relative; /* Necessário para posicionar o botão de compartilhamento */
 }
+
+.share-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6c757d;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.share-button:hover {
+    background-color: #e9ecef;
+    color: #2c3e50;
+    transform: scale(1.1);
+}
+
+.share-qr-img {
+    width: 200px;
+    height: 200px;
+    margin: 15px auto;
+    display: block;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
 
 .profile-pic-container {
     width: 100px; /* Um pouco menor */
@@ -113,7 +148,7 @@ p {
     cursor: pointer;
     background-color: #ffffff; /* Fundo branco padrão para botões */
     width: 60%; /* Define a largura do botão como 60% do .button-container */
-    box-sizing: border-box; /* Garante que padding e borda sejam incluído na largura total */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
 }
 
 .button i {

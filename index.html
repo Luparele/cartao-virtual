@@ -11,6 +11,9 @@
 </head>
 <body>
     <header class="profile-header">
+        <button class="share-button" id="openShareModal" title="Compartilhar">
+            <i class="fas fa-share-alt"></i>
+        </button>
         <div class="profile-pic-container">
             <img src="img/perfil.png" alt="Sua Foto" class="profile-pic">
         </div>
@@ -59,6 +62,20 @@
             <p>Ou copie a chave Pix: <span id="pixKey">09995146797</span> <button class="copy-button" data-clipboard-target="#pixKey">Copiar</button></p>
         </div>
     </div>
+
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeShareModal">&times;</span>
+            <h2>Compartilhar Cartão</h2>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://luparele.github.io/cartao-virtual/" alt="QR Code" class="share-qr-img">
+            <p>Escaneie para acessar o cartão virtual</p>
+            <div class="share-url-container" style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+                <input type="text" value="https://luparele.github.io/cartao-virtual/" id="shareUrl" readonly style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ddd; text-align: center; font-size: 0.85em;">
+                <button class="copy-button" data-clipboard-target="#shareUrl">Copiar Link</button>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="footer">
         <p>&copy; 2025 Eduardo Luparele. Todos os direitos reservados.</p>
