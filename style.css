@@ -113,7 +113,7 @@ p {
     cursor: pointer;
     background-color: #ffffff; /* Fundo branco padrão para botões */
     width: 60%; /* Define a largura do botão como 60% do .button-container */
-    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluído na largura total */
 }
 
 .button i {
@@ -294,7 +294,7 @@ p {
 
 /* ESTILO DO RODAPÉ COM COPYRIGHT */
 .footer {
-    margin-top: auto; /* Empurra o rodapé para o final da página */
+    margin-top: 30px; /* Espaçamento reduzido conforme solicitado */
     padding: 15px; /* Espaçamento interno */
     text-align: center;
     font-size: 0.8em;

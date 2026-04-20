@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const tel = "+5521971292787"; // Seu telefone
             const email = "security@intalog.com.br"; // Seu email
             const organization = "Intalog"; // Sua empresa
-            const title = "Coordenador Security"; // Seu cargo
+            const title = "Coordenador Securitário"; // Seu cargo
 
             const vcard = `BEGIN:VCARD
 VERSION:3.0
