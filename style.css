@@ -338,6 +338,31 @@ p {
     max-width: 320px; /* Limita a largura do texto do rodapé */
 }
 
+.socials-title {
+    margin: 0 0 8px 0;
+    color: #adb5bd; /* Cor discreta e igual aos ícones */
+    font-weight: 500;
+}
+
+.intalog-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.intalog-socials a {
+    color: #adb5bd; /* Cor discreta (cinza claro) */
+    font-size: 1.5em; /* Tamanho dos ícones */
+    transition: color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.intalog-socials a:hover {
+    color: #6c757d; /* Mais escuro no hover para indicar interatividade */
+    transform: translateY(-2px);
+}
+
 @media (max-width: 480px) {
     body {
         padding: 15px;
